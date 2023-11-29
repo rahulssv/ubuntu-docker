@@ -1,0 +1,12 @@
+# Dockerfile for Container 2
+FROM ubuntu:latest
+
+RUN apt-get update && \
+    apt-get install -y openjdk-11-jdk
+
+WORKDIR /usr/src/app
+COPY Container2App.java .
+
+RUN javac Container2App.java
+
+CMD ["java", "Container2App"]
