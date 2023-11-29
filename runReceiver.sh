@@ -6,6 +6,4 @@ docker network create "mynetwork" ;
 
 docker run --name container2 --network mynetwork -it container2-image ;
 
-docker run --name container1 --network mynetwork -it container1-image ;
-
 
